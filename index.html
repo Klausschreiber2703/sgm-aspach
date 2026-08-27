@@ -75,10 +75,28 @@ footer{background:var(--r);color:white;text-align:center;padding:25px}
 @media(max-width:700px){.contacts,.event-dates{grid-template-columns:1fr}}
 @media(max-width:700px){.form-grid{grid-template-columns:1fr}.form-group.full{grid-column:auto}}
 @media(max-width:620px){.grid{grid-template-columns:1fr}section{padding:20px}nav{width:100%}nav a{flex:1 1 45%;text-align:center;background:#f5f6f7}}
+
+html{scroll-behavior:smooth}
+.logo-home{display:inline-block}
+.back-to-top{
+ position:fixed;right:18px;bottom:20px;z-index:999;
+ width:52px;height:52px;border-radius:50%;
+ display:flex;align-items:center;justify-content:center;
+ background:var(--r);color:#fff;text-decoration:none;
+ font-size:28px;font-weight:900;line-height:1;
+ box-shadow:0 5px 16px rgba(0,0,0,.24);
+ opacity:0;visibility:hidden;transform:translateY(8px);
+ transition:opacity .2s ease,transform .2s ease,visibility .2s;
+}
+.back-to-top.show{opacity:1;visibility:visible;transform:translateY(0)}
+.back-to-top:focus-visible{outline:3px solid var(--b);outline-offset:3px}
+@media(max-width:620px){.back-to-top{right:14px;bottom:16px;width:48px;height:48px;font-size:25px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.back-to-top{transition:none}}
+
 </style>
 </head>
-<body>
-<header><div class="bar"><img class="logo" src="logo.jpeg" alt="SGM Aspach Logo"><div class="brand">SGM Aspach</div>
+<body id="start">
+<header><div class="bar"><a href="#start" class="logo-home" aria-label="Zurück zum Seitenanfang"><img class="logo" src="logo.jpeg" alt="SGM Aspach Logo"></a><div class="brand">SGM Aspach</div>
 <nav><a href="#sgm">Die Spielgemeinschaft</a><a href="#teams">Die Teams</a><a href="#kontakt">Ansprechpartner</a><a href="#termine">Termine</a><a href="https://sgm-aspach.fan12.de/shop/page/2/?product_tag=bestseller&label=Bestseller" target="_blank" rel="noopener noreferrer">Fanshop</a><a href="#probetraining">Probetraining</a></nav>
 </div></header>
 
@@ -439,8 +457,7 @@ Telefon: 0151 17314782
 <h3>10. Verschlüsselte Übertragung</h3>
 <p>Sobald HTTPS für die Domain vollständig aktiviert ist, wird die Verbindung zu dieser Website verschlüsselt übertragen. Achte beim Absenden personenbezogener Daten darauf, dass in der Browserzeile <b>https://</b> angezeigt wird.</p>
 
-<div class="legal-box"><b>Stand:</b> August 2026<br>
-Diese Datenschutzerklärung ist als auf die aktuelle technische Umsetzung der SGM-Aspach-Seite abgestimmte Vorlage erstellt. Bei Änderungen an Hosting, Formularversand, Analyse-Tools, Social-Media-Einbindungen oder weiteren Diensten sollte sie entsprechend angepasst werden.</div>
+
 </div>
 </section>
 
@@ -448,5 +465,17 @@ Diese Datenschutzerklärung ist als auf die aktuelle technische Umsetzung der SG
 <footer>© 2026 SGM Aspach
 <div class="footer-links"><a href="#impressum">Impressum</a><a href="#datenschutz">Datenschutz</a></div>
 </footer>
+
+<a href="#start" id="backToTop" class="back-to-top" aria-label="Zurück nach oben" title="Nach oben">↑</a>
+
+<script>
+(function(){
+ const btn=document.getElementById('backToTop');
+ if(!btn) return;
+ const update=()=>btn.classList.toggle('show', window.scrollY > 450);
+ window.addEventListener('scroll', update, {passive:true});
+ update();
+})();
+</script>
 </body>
 </html>
