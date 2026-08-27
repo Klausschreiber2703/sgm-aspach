@@ -99,6 +99,17 @@ html{scroll-behavior:smooth}
 .page-main section{margin-top:26px}
 @media(max-width:900px){.home-tiles{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:620px){.home-tiles{grid-template-columns:1fr}}
+
+.widget-section{margin-top:34px}
+.widget-section h3{font-size:1.7rem;margin-bottom:8px}
+.widget-intro{color:#5c6670;line-height:1.5;margin-bottom:20px}
+.widget-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}
+.widget-card{border:1px solid #e1e5e9;border-radius:14px;padding:18px;background:#fff;box-shadow:0 4px 14px #0001;min-width:0}
+.widget-card h4{margin:0 0 14px;color:var(--r);font-size:1.35rem}
+.widget-block{margin-top:20px}
+.widget-block h5{margin:0 0 10px;font-size:1.05rem;color:#333}
+@media(max-width:800px){.widget-grid{grid-template-columns:1fr}}
+
 </style></head>
 <body id="start"><header><div class="bar">
 <a href="index.html" class="logo-home" aria-label="Zur Startseite"><img class="logo" src="logo.jpeg" alt="SGM Aspach Logo"></a>
@@ -145,7 +156,7 @@ html{scroll-behavior:smooth}
             <h3>D-Jugend · 2 Mannschaften</h3>
             
             <p><b>Jahrgänge:</b> 2015 & 2014</p>
-            <p><b>Trainer:</b> Klaus Schreiber, Stefan Froner, Ahmet Akgün</p>
+            <p><b>Trainer:</b> Klaus Schreiber, Steffan Froner, Ahmet Akgün</p>
             <p><b>Training:</b> Montag & Mittwoch, 17:30–19:00 Uhr</p>
           </div>
         </article>
@@ -229,8 +240,60 @@ html{scroll-behavior:smooth}
           </div>
         </article>
         </div>
-</section></main>
+</section>
+<section class="widget-section" id="d-jugend-spiele">
+  <h3>D-Jugend – Spiele & Tabellen</h3>
+  <p class="widget-intro">Hier findest Du die aktuellen und kommenden Spiele sowie die Tabellen unserer D1 und D2. Die Daten werden direkt von FUSSBALL.DE geladen und automatisch aktualisiert.</p>
+
+  <div class="widget-grid">
+    <article class="widget-card">
+      <h4>D1</h4>
+      <div class="widget-block">
+        <h5>Nächste & letzte Spiele</h5>
+        <div 
+          class="fussballde_widget"
+          data-id="cd4855b1-7ca4-49a7-97e7-3085a738e891"
+          data-type="team-matches"
+          style="width: 100%">
+        </div>
+      </div>
+      <div class="widget-block">
+        <h5>Aktuelle Tabelle</h5>
+        <div 
+          class="fussballde_widget"
+          data-id="58582c60-4ae7-42ac-9484-146e58a7a3bd"
+          data-type="table"
+          style="width: 100%">
+        </div>
+      </div>
+    </article>
+
+    <article class="widget-card">
+      <h4>D2</h4>
+      <div class="widget-block">
+        <h5>Nächste & letzte Spiele</h5>
+        <div 
+          class="fussballde_widget"
+          data-id="393513a0-1190-4918-ad84-e20f6d193327"
+          data-type="team-matches"
+          style="width: 100%">
+        </div>
+      </div>
+      <div class="widget-block">
+        <h5>Aktuelle Tabelle</h5>
+        <div 
+          class="fussballde_widget"
+          data-id="5a1e77ef-c57a-49b1-a722-595fcd340e48"
+          data-type="table"
+          style="width: 100%">
+        </div>
+      </div>
+    </article>
+  </div>
+</section>
+</main>
 <footer>© 2026 SGM Aspach<div class="footer-links"><a href="impressum.html">Impressum</a><a href="datenschutz.html">Datenschutz</a></div></footer>
 <a href="#start" id="backToTop" class="back-to-top" aria-label="Zurück nach oben" title="Nach oben">↑</a>
 <script>(function(){const b=document.getElementById('backToTop');if(!b)return;const u=()=>b.classList.toggle('show',window.scrollY>450);window.addEventListener('scroll',u,{passive:true});u();})();</script>
+<script type="text/javascript" src="https://www.fussball.de/widgets.js"></script>
 </body></html>
