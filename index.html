@@ -4,7 +4,11 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>SGM Aspach</title>
-<meta name="description" content="SGM Aspach – Jugendfußball der Spvgg Kleinaspach/Allmersbach und des TSV Bad Rietenau">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+<meta name="description" content="SGM Aspach – Jugendfußball der Spvgg Kleinaspach und des TSV Bad Rietenau">
 <style>
 :root{--r:#790027;--b:#62aaf2;--bg:#f4f6f8;--text:#20252b}
 *{box-sizing:border-box}
@@ -42,15 +46,40 @@ h2,h3{color:var(--r)} h2{font-size:2rem;margin-top:0}
 .event h3{font-size:1.7rem;margin:0 0 14px}
 .event-dates{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:16px}
 .date-box{background:#eaf4ff;border-left:5px solid var(--b);padding:14px;border-radius:10px;font-weight:bold}
+
+.form-wrap{max-width:820px;margin:auto}
+.form-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+.form-group{display:flex;flex-direction:column;gap:7px}
+.form-group.full{grid-column:1/-1}
+.form-group label,.choice-title{font-weight:700;color:#333}
+.form-group input,.form-group textarea{width:100%;padding:13px 14px;border:1px solid #cfd5dc;border-radius:9px;font:inherit;background:#fbfcfd}
+.form-group textarea{min-height:125px;resize:vertical}
+.choices{display:flex;flex-wrap:wrap;gap:12px 20px;padding:5px 0}
+.choice{display:flex;align-items:center;gap:7px}
+.choice input{width:auto}
+.required{color:#b00020}
+.submit-btn{border:0;background:var(--r);color:white;padding:14px 24px;border-radius:10px;font-size:1.05rem;font-weight:800;cursor:pointer}
+.submit-btn:hover{filter:brightness(.92)}
+.form-note{font-size:.92rem;line-height:1.5;color:#5c6670;background:#f7f9fb;padding:12px;border-radius:9px}
+.honey{display:none!important}
+
+.legal{line-height:1.65}
+.legal h3{margin-top:28px}
+.legal h4{margin:20px 0 8px;color:#333}
+.legal-box{background:#f7f9fb;border-left:5px solid var(--b);padding:14px 16px;border-radius:10px;margin:14px 0}
+.legal a{color:var(--r)}
+.footer-links{margin-top:10px;display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+.footer-links a{color:white;font-weight:700}
 footer{background:var(--r);color:white;text-align:center;padding:25px}
 @media(max-width:900px){.grid{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:700px){.contacts,.event-dates{grid-template-columns:1fr}}
+@media(max-width:700px){.form-grid{grid-template-columns:1fr}.form-group.full{grid-column:auto}}
 @media(max-width:620px){.grid{grid-template-columns:1fr}section{padding:20px}nav{width:100%}nav a{flex:1 1 45%;text-align:center;background:#f5f6f7}}
 </style>
 </head>
 <body>
 <header><div class="bar"><img class="logo" src="logo.jpeg" alt="SGM Aspach Logo"><div class="brand">SGM Aspach</div>
-<nav><a href="#sgm">Die Spielgemeinschaft</a><a href="#teams">Die Teams</a><a href="#kontakt">Ansprechpartner</a><a href="#termine">Termine</a><a href="https://sgm-aspach.fan12.de/shop/page/2/?product_tag=bestseller&label=Bestseller" target="_blank" rel="noopener noreferrer">Fanshop</a></nav>
+<nav><a href="#sgm">Die Spielgemeinschaft</a><a href="#teams">Die Teams</a><a href="#kontakt">Ansprechpartner</a><a href="#termine">Termine</a><a href="https://sgm-aspach.fan12.de/shop/page/2/?product_tag=bestseller&label=Bestseller" target="_blank" rel="noopener noreferrer">Fanshop</a><a href="#probetraining">Probetraining</a></nav>
 </div></header>
 
 <div class="hero"><img src="logo.jpeg" alt="SGM Aspach Vereinslogo"><h1>Willkommen bei der SGM Aspach</h1><p>Gemeinsam. Fußball. Aspach.</p></div>
@@ -59,7 +88,7 @@ footer{background:var(--r);color:white;text-align:center;padding:25px}
 <section id="sgm">
 <h2>Die Spielgemeinschaft</h2>
 <div class="intro">
-<p>Die <b>SGM Aspach</b> ist eine gemeinsame Jugendspielgemeinschaft der Fußballabteilungen des <b>TSV Bad Rietenau</b> und der <b>Spvgg Kleinaspach/Allmersbach</b>. Gemeinsam möchten wir unsere Kräfte bündeln und den Jugendfußball in Aspach langfristig attraktiv, lebendig und zukunftsfähig gestalten.</p>
+<p>Die <b>SGM Aspach</b> ist eine gemeinsame Jugendspielgemeinschaft der Fußballabteilungen des <b>TSV Bad Rietenau</b> und der <b>Spvgg Kleinaspach</b>. Gemeinsam möchten wir unsere Kräfte bündeln und den Jugendfußball in Aspach langfristig attraktiv, lebendig und zukunftsfähig gestalten.</p>
 <p>Im Mittelpunkt steht für uns dabei immer eines: <b>Fußball soll für alle da sein.</b></p>
 <p>Unser wichtigstes Ziel ist es, jedem Kind und jedem Jugendlichen in Aspach die Möglichkeit zu geben, Fußball zu spielen und Teil einer Gemeinschaft zu sein. Dabei spielt es für uns keine Rolle, ob jemand besonders talentiert ist, gerade erst mit dem Fußball beginnt oder mit einem Handicap zu uns kommt. <b>Bei der SGM Aspach soll sich jeder willkommen und als Teil des Teams fühlen.</b></p>
 <p>Gleichzeitig möchten wir unseren Jugendfußball auch sportlich und leistungsorientiert weiterentwickeln. Durch die Zusammenführung der Spielerinnen und Spieler beider Vereine können wir in den einzelnen Altersklassen mehrere Mannschaften stellen und Teams entsprechend ihres Leistungsstandes einteilen.</p>
@@ -233,7 +262,191 @@ footer{background:var(--r);color:white;text-align:center;padding:25px}
 </article>
 </section>
 
+
+<section id="probetraining">
+<h2>Probetraining</h2>
+<div class="form-wrap">
+<p class="intro">Du möchtest bei der SGM Aspach Fußball spielen? Dann fülle das Formular aus. Wir melden uns anschließend bei dir.</p>
+
+<form action="https://formsubmit.co/Klaus.schreiber1999@yahoo.de" method="POST">
+<input type="hidden" name="_subject" value="Neue Anmeldung zum Probetraining – SGM Aspach">
+<input type="hidden" name="_template" value="table">
+<input type="hidden" name="_next" value="https://sgm-aspach.de/danke.html">
+<input type="hidden" name="_url" value="https://sgm-aspach.de/#probetraining">
+<input class="honey" type="text" name="_honey" tabindex="-1" autocomplete="off">
+
+<div class="form-grid">
+  <div class="form-group">
+    <label for="vorname">Vorname <span class="required">*</span></label>
+    <input id="vorname" name="Vorname" type="text" required autocomplete="given-name">
+  </div>
+  <div class="form-group">
+    <label for="nachname">Nachname <span class="required">*</span></label>
+    <input id="nachname" name="Nachname" type="text" required autocomplete="family-name">
+  </div>
+
+  <div class="form-group">
+    <label for="geburtsdatum">Geburtsdatum <span class="required">*</span></label>
+    <input id="geburtsdatum" name="Geburtsdatum" type="date" required>
+  </div>
+  <div class="form-group">
+    <label for="telefon">Telefonnummer <span class="required">*</span></label>
+    <input id="telefon" name="Telefonnummer" type="tel" required autocomplete="tel">
+  </div>
+
+  <div class="form-group full">
+    <label for="email">E-Mail <span class="required">*</span></label>
+    <input id="email" name="E-Mail" type="email" required autocomplete="email">
+  </div>
+
+  <div class="form-group full">
+    <label for="anschrift">Deine Anschrift (Straße/Nr., PLZ, Ort) <span class="required">*</span></label>
+    <input id="anschrift" name="Anschrift" type="text" required autocomplete="street-address">
+  </div>
+
+  <div class="form-group full">
+    <label for="verein">Dein bisheriger Verein <span class="required">*</span></label>
+    <input id="verein" name="Bisheriger Verein" type="text" required>
+  </div>
+
+  <div class="form-group full">
+    <div class="choice-title">Deine Lieblingsposition(en) <span class="required">*</span></div>
+    <div class="choices">
+      <label class="choice"><input type="checkbox" name="Lieblingsposition[]" value="Tor"> Tor</label>
+      <label class="choice"><input type="checkbox" name="Lieblingsposition[]" value="Abwehr"> Abwehr</label>
+      <label class="choice"><input type="checkbox" name="Lieblingsposition[]" value="Mittelfeld"> Mittelfeld</label>
+      <label class="choice"><input type="checkbox" name="Lieblingsposition[]" value="Angriff"> Angriff</label>
+    </div>
+  </div>
+
+  <div class="form-group full">
+    <div class="choice-title">Welches ist Dein stärkeres Bein? <span class="required">*</span></div>
+    <div class="choices">
+      <label class="choice"><input type="radio" name="Stärkeres Bein" value="Links" required> Links</label>
+      <label class="choice"><input type="radio" name="Stärkeres Bein" value="Rechts"> Rechts</label>
+      <label class="choice"><input type="radio" name="Stärkeres Bein" value="Beidfüßig"> Beidfüßig</label>
+    </div>
+  </div>
+
+  <div class="form-group full">
+    <label for="nachricht">Hast Du eine Nachricht an uns?</label>
+    <textarea id="nachricht" name="Nachricht"></textarea>
+  </div>
+
+  <div class="form-group full">
+    <div class="form-note">
+Die Angaben werden ausschließlich zur Bearbeitung der Anfrage zum Probetraining verwendet. 
+Bei Minderjährigen sollte das Formular durch oder gemeinsam mit einer erziehungsberechtigten Person ausgefüllt werden.
+Weitere Informationen findest Du in unserer <a href="#datenschutz">Datenschutzerklärung</a>.
+</div>
+<label class="choice"><input type="checkbox" name="Datenschutzhinweis bestätigt" value="Ja" required> 
+Ich habe die Datenschutzhinweise zur Kenntnis genommen. <span class="required">*</span></label>
+  </div>
+
+  <div class="form-group full">
+    <button class="submit-btn" type="submit">Anmeldung absenden</button>
+  </div>
+</div>
+</form>
+</div>
+</section>
+
+
+<section id="impressum">
+<h2>Impressum</h2>
+<div class="legal">
+<p>Diese Website ist das gemeinsame Internetangebot der Jugendspielgemeinschaft <b>SGM Aspach</b> der beiden Stammvereine:</p>
+
+<div class="legal-box">
+<b>SPVGG Kleinaspach/Allmersbach a.W. e.V.</b><br>
+Rielingshäuser Straße<br>
+71546 Aspach<br><br>
+Gemeinschaftlich vertretungsberechtigter Vorstand:<br>
+Thomas Übele (1. Vorsitzender)<br>
+Alexander Holz (2. Vorsitzender)<br><br>
+E-Mail: vorstand@spvgg-kleinaspach.de<br>
+Vereinsregister: Amtsgericht Backnang, VR 162
+</div>
+
+<div class="legal-box">
+<b>TSV Bad Rietenau 1921 e.V.</b><br>
+Brunnengässle 34<br>
+71546 Aspach<br><br>
+Vertretungsberechtigter Vorstand:<br>
+Jürgen Dorn (1. Vorstand)<br><br>
+E-Mail: info@tsvbadrietenau.de<br>
+Vereinsregister: Amtsgericht Stuttgart, VR 270031
+</div>
+
+<h3>Ansprechpartner für die Jugendspielgemeinschaft</h3>
+<p>
+Klaus Schreiber – Jugendleiter Spvgg Kleinaspach<br>
+Telefon: 0176 22333189<br>
+E-Mail: Klaus.schreiber1999@yahoo.de
+</p>
+<p>
+Alexandra Froner – Jugendleiterin TSV Bad Rietenau<br>
+Telefon: 0151 17314782
+</p>
+
+<h3>Verantwortlich für redaktionelle Inhalte</h3>
+<p>Für die Inhalte der SGM-Aspach-Website sind die beiden Stammvereine im Rahmen ihrer gemeinsamen Jugendarbeit verantwortlich. Für einzelne Beiträge können zusätzlich die jeweils genannten Autorinnen und Autoren verantwortlich sein.</p>
+
+<h3>Externe Links</h3>
+<p>Diese Website enthält Links zu externen Angeboten, zum Beispiel zum Fanshop. Für die Inhalte externer Seiten ist der jeweilige Betreiber verantwortlich. Werden uns rechtswidrige Inhalte bekannt, entfernen wir entsprechende Links.</p>
+
+<h3>Urheberrecht</h3>
+<p>Die auf dieser Website veröffentlichten eigenen Inhalte, Texte, Grafiken und Bilder dürfen nur im Rahmen der gesetzlichen Bestimmungen genutzt werden. Rechte Dritter bleiben unberührt.</p>
+</div>
+</section>
+
+<section id="datenschutz">
+<h2>Datenschutzerklärung</h2>
+<div class="legal">
+<p>Mit den folgenden Hinweisen informieren wir darüber, welche personenbezogenen Daten beim Besuch dieser Website und bei der Nutzung des Formulars „Probetraining“ verarbeitet werden.</p>
+
+<h3>1. Verantwortliche Stellen</h3>
+<p>Die Website wird im Rahmen der gemeinsamen Jugendarbeit der <b>SPVGG Kleinaspach/Allmersbach a.W. e.V.</b> und des <b>TSV Bad Rietenau 1921 e.V.</b> betrieben. Kontaktdaten und Anschriften stehen im <a href="#impressum">Impressum</a>.</p>
+
+<h3>2. Hosting über GitHub Pages</h3>
+<p>Diese Website wird über <b>GitHub Pages</b> bereitgestellt. Beim Aufruf der Website können technisch erforderliche Verbindungsdaten verarbeitet werden, insbesondere die IP-Adresse des aufrufenden Geräts. GitHub weist darauf hin, dass IP-Adressen von Besucherinnen und Besuchern von GitHub-Pages-Seiten zu Sicherheitszwecken protokolliert und gespeichert werden.</p>
+<p>Anbieter: GitHub, Inc. bzw. für bestimmte Dienste GitHub B.V. Weitere Informationen enthält die Datenschutzerklärung von GitHub.</p>
+
+<h3>3. Formular „Probetraining“</h3>
+<p>Wenn Du das Formular zum Probetraining verwendest, verarbeiten wir die dort eingegebenen Angaben, insbesondere Name, Geburtsdatum, Kontaktdaten, Anschrift, bisherigen Verein, gewünschte Spielposition und Deine Nachricht. Diese Daten werden nur verwendet, um die Anfrage zuzuordnen, ein passendes Probetraining zu organisieren und mit Dir beziehungsweise einer erziehungsberechtigten Person Kontakt aufzunehmen.</p>
+<p>Die Angaben werden nicht für Werbung verwendet. Die Daten werden gelöscht, wenn die Anfrage abschließend bearbeitet ist und keine gesetzlichen oder vereinsbezogenen Aufbewahrungspflichten entgegenstehen.</p>
+<p><b>Hinweis für Minderjährige:</b> Das Formular sollte bei minderjährigen Spielerinnen und Spielern durch oder gemeinsam mit einer erziehungsberechtigten Person ausgefüllt werden.</p>
+
+<h3>4. Formularversand über FormSubmit</h3>
+<p>Für die technische Übermittlung des Probetraining-Formulars wird der Dienst <b>FormSubmit</b> eingesetzt. Die eingegebenen Formulardaten werden dabei technisch über FormSubmit verarbeitet und anschließend per E-Mail an die für die SGM Aspach hinterlegte Empfängeradresse weitergeleitet. FormSubmit erklärt, die über Formulare übermittelten Informationen zur Bereitstellung des Dienstes zu verarbeiten.</p>
+<p>Bitte übermittle über das Formular keine Gesundheitsdaten, Diagnosen oder andere besonders sensible Informationen.</p>
+
+<h3>5. Zweck und Rechtsgrundlage</h3>
+<p>Die Datenverarbeitung erfolgt zur Bearbeitung Deiner Anfrage und zur Organisation eines möglichen Probetrainings. Soweit die Verarbeitung zur Durchführung vorvertraglicher beziehungsweise vereinsbezogener Maßnahmen erforderlich ist, kann sie auf Art. 6 Abs. 1 lit. b DSGVO gestützt werden. Soweit im Einzelfall eine Einwilligung erforderlich ist, erfolgt die Verarbeitung auf Grundlage von Art. 6 Abs. 1 lit. a DSGVO.</p>
+
+<h3>6. Empfänger der Daten</h3>
+<p>Zugriff auf die per Formular übermittelten Angaben erhalten nur die Personen, die die Probetraining-Anfrage für die SGM Aspach bearbeiten. Technisch können außerdem die eingesetzten Dienstleister GitHub Pages und FormSubmit Daten verarbeiten.</p>
+
+<h3>7. Speicherdauer</h3>
+<p>Wir speichern personenbezogene Daten nur so lange, wie sie für die Bearbeitung der Anfrage und die Organisation des Probetrainings benötigt werden oder gesetzliche beziehungsweise vereinsbezogene Aufbewahrungsgründe bestehen.</p>
+
+<h3>8. Deine Rechte</h3>
+<p>Nach Maßgabe der DSGVO bestehen insbesondere Rechte auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung, Datenübertragbarkeit und – soweit einschlägig – Widerspruch. Eine erteilte Einwilligung kann mit Wirkung für die Zukunft widerrufen werden. Außerdem besteht ein Beschwerderecht bei einer zuständigen Datenschutzaufsichtsbehörde.</p>
+
+<h3>9. Kontakt zu Datenschutzfragen</h3>
+<p>Für Fragen zur Verarbeitung Deiner Daten kannst Du Dich an die im Impressum genannten Vereine oder an den Ansprechpartner der SGM Aspach wenden.</p>
+
+<h3>10. Verschlüsselte Übertragung</h3>
+<p>Sobald HTTPS für die Domain vollständig aktiviert ist, wird die Verbindung zu dieser Website verschlüsselt übertragen. Achte beim Absenden personenbezogener Daten darauf, dass in der Browserzeile <b>https://</b> angezeigt wird.</p>
+
+<div class="legal-box"><b>Stand:</b> August 2026<br>
+Diese Datenschutzerklärung ist als auf die aktuelle technische Umsetzung der SGM-Aspach-Seite abgestimmte Vorlage erstellt. Bei Änderungen an Hosting, Formularversand, Analyse-Tools, Social-Media-Einbindungen oder weiteren Diensten sollte sie entsprechend angepasst werden.</div>
+</div>
+</section>
+
 </main>
-<footer>© 2026 SGM Aspach</footer>
+<footer>© 2026 SGM Aspach
+<div class="footer-links"><a href="#impressum">Impressum</a><a href="#datenschutz">Datenschutz</a></div>
+</footer>
 </body>
 </html>
